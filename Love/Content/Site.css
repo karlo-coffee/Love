@@ -1,0 +1,48 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+/* Global Dark Valentine Navbar */
+.custom-nav {
+    background: rgba(30, 0, 7, 0.9) !important; /* Deep burgundy */
+    backdrop-filter: blur(15px);
+    border-bottom: 2px solid #ff4d6d;
+    padding: 10px 0;
+}
+
+.brand-love {
+    color: #ff4d6d !important;
+    font-weight: 800;
+}
+
+.navbar-quote {
+    font-family: 'Dancing Script', cursive;
+    color: #ff85a1;
+    font-size: 1.2rem;
+}
+
+.custom-link {
+    color: #fff0f3 !important;
+    margin-left: 15px;
+}
+
+    .custom-link:hover {
+        color: #ff4d6d !important;
+    }
+

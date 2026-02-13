@@ -1,0 +1,67 @@
+﻿@using ValentineApp.Controllers
+@model List<LoveMessage>
+@{
+    ViewBag.Title = "Messages";
+}
+
+<style>
+    :root {
+        --bg-color: #fff0f3;
+    }
+
+    .message-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        border: 1px solid rgba(255, 77, 109, 0.1);
+    }
+
+    .msg-img-frame {
+        width: 150px;
+        height: 150px;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+        .msg-img-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* The side-blend effect you wanted */
+            -webkit-mask-image: linear-gradient(to right, black 40%, transparent 100%);
+            mask-image: linear-gradient(to right, black 40%, transparent 100%);
+        }
+
+    .msg-content {
+        padding: 20px 30px;
+        font-family: 'Dancing Script', cursive; /* A romantic font */
+        font-size: 1.5rem;
+        color: #c9184a;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="text-center mb-5" data-aos="fade-down">
+        <h1 class="display-4" style="color: #ff4d6d;">Little Notes</h1>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-9">
+            @foreach (var m in Model)
+            {
+                <div class="message-card" data-aos="fade-left">
+                    <div class="msg-img-frame">
+                        <img src="@Url.Content(m.Img)" alt="Memory" />
+                    </div>
+                    <div class="msg-content">
+                        "@m.Text"
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
